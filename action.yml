@@ -18,8 +18,8 @@ outputs:
   tag:
     description: The latest tag. If no tag exists and `inputs.with_initial_version` == `false`, this value is `''`.
 runs:
-  using: docker
-  image: Dockerfile
+  using: 'docker'
+  image: 'docker://ghcr.io/step-security/action-get-latest-tag:v1.6.0@sha256:029dcb9b1135cce4aa2e8f003910f0362655378dee264a03c71c1e27a4c27b5d' #v1.6.0
 branding:
   icon: bookmark
   color: green
