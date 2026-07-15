@@ -56,7 +56,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v7
 
       - uses: actions-ecosystem/action-release-label@v1
         id: release-label
@@ -73,7 +73,7 @@ jobs:
           current_version: ${{ steps.get-latest-tag.outputs.tag }}
           level: ${{ steps.release-label.outputs.level }}
 
-      - uses: actions-ecosystem/action-push-tag@v1
+      - uses: step-security/action-push-tag@v1
         if: ${{ steps.release-label.outputs.level != null }}
         with:
           tag: ${{ steps.bump-semver.outputs.new_version }}
@@ -97,4 +97,4 @@ Action Get Latest Tag is released under the [Apache License 2.0](./LICENSE).
 [release-badge]: https://img.shields.io/github/v/release/step-security/action-get-latest-tag?style=for-the-badge&logo=github
 
 [license]: LICENSE
-[license-badge]: https://img.shields.io/github/license/actions-ecosystem/action-add-labels?style=for-the-badge
+
