@@ -4,7 +4,6 @@
 
 [![actions-workflow-lint][actions-workflow-lint-badge]][actions-workflow-lint]
 [![release][release-badge]][release]
-[![license][license-badge]][license]
 
 This is a GitHub Action to get a latest Git tag.
 
@@ -80,11 +79,10 @@ jobs:
           message: '${{ steps.bump-semver.outputs.new_version }}: PR #${{ github.event.pull_request.number }} ${{ github.event.pull_request.title }}'
 ```
 
-For a further practical example, see [.github/workflows/release.yml](.github/workflows/release.yml).
-
 ## License
 
 Copyright 2020 The Actions Ecosystem Authors.
+Copyright 2026 StepSecurity
 
 Action Get Latest Tag is released under the [Apache License 2.0](./LICENSE).
 
@@ -95,6 +93,4 @@ Action Get Latest Tag is released under the [Apache License 2.0](./LICENSE).
 
 [release]: https://github.com/step-security/action-get-latest-tag/releases
 [release-badge]: https://img.shields.io/github/v/release/step-security/action-get-latest-tag?style=for-the-badge&logo=github
-
-[license]: LICENSE
 
